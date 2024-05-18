@@ -1,38 +1,248 @@
+/* General styles */
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styles */
+.header {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(40, 44, 52, 0.5);
+}
+
+.logo img {
+  width: 150px;
+}
+
+.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navigation ul li:last-child {
+  margin-right: 0;
+}
+
+.navigation ul li a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.get-started button {
+  background-color: #61dafb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.get-started button:hover {
+  background-color: #4fa4cf;
+}
+
+.main-content {
+  display: flex;
+  background: 
+    linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
+    linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
+    url('C:\\Users\\ROSHAN GEORGE\\cryptocasinoplus-frontend\\src\\assets\\casino.png');
+  
+  background-size: cover;
+  background-position: center;
+  
+  min-height: 100vh;
+  
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+}
+
+.text-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.image-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.reversed-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  color: white;
+  background-color: rgba(40, 44, 52, 0.5);
+}
+
+.reversed-content .text-container {
+  text-align: right;
+}
+
+.reversed-content .image-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.top-text-images-below {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(40, 44, 52, 0.5);
+}
+
+.top-text-images-below .text-container {
+  margin-bottom: 20px;
+}
+
+.top-text-images-below .images-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.top-text-images-below .images-container img {
+  width: 30%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Styles for the new section with text on top and a timeline below */
+.timeline-section {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(40, 44, 52, 0.5);
+}
+
+.timeline-section .text-container {
+  margin-bottom: 20px;
+}
+
+.timeline {
+  position: relative;
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 2px;
+  background: white;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(even) {
+  justify-content: flex-start;
+}
+
+.timeline-item .timeline-date {
+  width: 20%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.timeline-item .timeline-content {
+  width: 20%;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+  text-align: left;
+  padding-left: 10px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  text-align: right;
+  padding-right: 10px;
+}
+
+/* App.css */
+.grid-page {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  background-color: rgba(40, 44, 52, 0.5);
+}
+
+.grid-page .text-container {
+  margin-bottom: 20px;
+}
+
+.grid-page .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-page .image-grid img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* App.css */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-column {
+  text-align: center;
+}
+
+.footer-column img {
+  width: 50px;
+  height: auto;
 }
