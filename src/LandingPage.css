@@ -107,7 +107,7 @@
   justify-content: space-between;
   padding: 20px;
   color: white;
-  background-color: rgba(40, 44, 52, 0.5);
+  background-color: rgba(33, 28, 51, 1);
 }
 
 .reversed-content .text-container {
@@ -126,7 +126,7 @@
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: rgba(40, 44, 52, 0.5);
+  background-color: rgba(33, 28, 51, 1);
 }
 
 .top-text-images-below .text-container {
@@ -150,7 +150,7 @@
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: rgba(40, 44, 52, 0.5);
+  background-color: rgba(33, 28, 51, 1);
 }
 
 .timeline-section .text-container {
@@ -214,12 +214,12 @@
   padding-right: 10px;
 }
 
-/* App.css */
+/* LandingPage.css */
 .grid-page {
   padding: 20px;
   text-align: center;
   color: white;
-  background-color: rgba(40, 44, 52, 0.5);
+  background-color: rgba(33, 28, 51, 1);
 }
 
 .grid-page .text-container {
@@ -238,7 +238,7 @@
   height: auto;
 }
 
-/* App.css */
+/* LandingPage.css */
 .footer {
   background-color: #333;
   color: white;
