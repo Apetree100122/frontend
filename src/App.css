@@ -6,17 +6,21 @@
 
 /* Header styles */
 .header {
-  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  background-color: rgba(40, 44, 52, 0.5);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Fully transparent background */
+  z-index: 1000; /* Ensure header is above other content */
 }
 
 .logo img {
-  width: 150px;
+  width: 125px;
 }
 
 .navigation ul {
@@ -27,7 +31,7 @@
 
 .navigation ul li {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 120px;
 }
 
 .navigation ul li:last-child {
@@ -39,6 +43,10 @@
   color: white;
 }
 
+.get-started {
+  margin-right: 120px;
+}
+
 .get-started button {
   background-color: #61dafb;
   color: white;
@@ -46,6 +54,7 @@
   border: none;
   cursor: pointer;
   font-size: 16px;
+  border-radius: 25px;
 }
 
 .get-started button:hover {
@@ -57,7 +66,7 @@
   background: 
     linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
     linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
-    url('C:\\Users\\ROSHAN GEORGE\\cryptocasinoplus-frontend\\src\\assets\\casino.png');
+    url('./assets/casino.png');
   
   background-size: cover;
   background-position: center;
