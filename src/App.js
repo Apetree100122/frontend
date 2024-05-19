@@ -1,11 +1,20 @@
+// App.js
 import React from 'react';
-import './LandingPage.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
+import DiscoverPage from './DiscoverPage';
+import './LandingPage.css';
+import AIArt from './AIArt';
 
 function App() {
   return (
-      // We need to route here. Create a Login page, a Register page, and a Home page.
-      <HomePage />
+    <Router>
+      <Routes>
+        <Route path="/discover" element={<DiscoverPage/>} />
+        <Route path="/" element={<HomePage/>} />
+        <Route path='/ai' element={<AIArt/>} />
+        </Routes>
+    </Router>
   );
 }
 

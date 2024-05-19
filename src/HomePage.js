@@ -1,4 +1,6 @@
+// HomePage.js
 import React, {useEffect} from "react";
+import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import controlVImage from "./assets/download.png";
 import templeImage from "./assets/lc.png";
@@ -7,8 +9,8 @@ import image2 from "./assets/lc.png";
 import image3 from "./assets/lc.png";
 import GridPage from "./GridPage";
 
-const HomePage = () => {
 
+const HomePage = () => {
     return (
         <div className="App">
             {/* Header */}
@@ -20,9 +22,9 @@ const HomePage = () => {
                 {/* Navigation */}
                 <nav className="navigation">
                     <ul>
-                        <li><a href="#discover">Discover</a></li>
-                        <li><a href="#marketplace">Marketplace</a></li>
-                        <li><a href="#how-it-works">How it Works</a></li>
+                        <li><Link to="/discover">Discover</Link></li>
+                        <li><Link to="/ai">AI Generation</Link></li>
+                        <li><Link to="/how-it-works">How it Works</Link></li>
                     </ul>
                 </nav>
                 {/* Get Started Button */}
