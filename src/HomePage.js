@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import logo from "./logo.svg";
 import controlVImage from "./assets/download.png";
 import templeImage from "./assets/lc.png";
-import image1 from "./assets/lc.png";
-import image2 from "./assets/lc.png";
-import image3 from "./assets/lc.png";
+import image1 from "./assets/defi.png";
+import image2 from "./assets/slot.png";
+import image3 from "./assets/ai.png";
 import GridPage from "./GridPage";
 
 
@@ -51,24 +51,34 @@ const HomePage = () => {
                 </div>
                 {/* Text Container */}
                 <div className="text-container">
-                    <h1>Lorem Ipsum Heading</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et urna nec tortor tristique
-                        posuere.</p>
+                    <h2>Why choose us?</h2>
+                    <p>BetChain is not just a platform; it’s a new era in online betting.
+                        Combining artificial intelligence with blockchain’s security,
+                        we offer a betting experience that’s both thrilling and trustworthy.
+                    </p>
                 </div>
             </div>
             {/* New Section with Text on Top and Images Below */}
             <div className="top-text-images-below">
                 {/* Text Container */}
                 <div className="text-container">
-                    <h1>Another Section Heading</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et urna nec tortor tristique
-                        posuere.</p>
+                    <h2>Our Tracks</h2>
+                    <p>
+                        BetChain is not just a platform; it’s a new era in online betting.
+                        Combining artificial intelligence with blockchain’s security
+                    </p>
                 </div>
                 {/* Images Container */}
                 <div className="images-container">
-                    <img src={image1} alt="Image 1"/>
-                    <img src={image2} alt="Image 2"/>
-                    <img src={image3} alt="Image 3"/>
+                    <div className={"custom-card"}>
+                        <img className={"test-img"} src={image1} alt="Image 1"/>
+                    </div>
+                    <div className={"custom-card"}>
+                        <img src={image2} alt="Image 2"/>
+                    </div>
+                    <div className={"custom-card"}>
+                        <img src={image3} alt="Image 3"/>
+                    </div>
                 </div>
             </div>
             {/* New Section with Text on Top and a Timeline Below */}
