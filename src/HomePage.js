@@ -81,57 +81,69 @@ const HomePage = () => {
             </div>
             {/* New Section with Text on Top and a Timeline Below */}
             <div className="timeline-section">
-  <div className="text-container">
-    <h3>BetChain: The Pinnacle of Decentralized Betting</h3>
-    <p>Experience the Thrill of Innovation</p>
-  </div>
-  <div className="timeline">
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 1</h3>
-        <h4>Provably Fair Gaming</h4>
-        <p>Borrow against your assets with confidence, thanks to real-time price data feeds ensuring accurate valuations.</p>
-      </div>
-    </div>
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 2</h3>
-        <h4>Cross-Chain Functionality</h4>
-        <p>Seamlessly transfer assets across blockchains for a fluid betting experience.</p>
-      </div>
-    </div>
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 3</h3>
-        <h4>AI-Driven Gaming</h4>
-        <p>Engage with games that learn from your preferences, offering a personalized touch to your gaming journey.</p>
-      </div>
-    </div>
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 4</h3>
-        <h4>DeFi Lending</h4>
-        <p>Borrow against your assets with confidence, thanks to real-time price data feeds ensuring accurate valuations.</p>
-      </div>
-    </div>
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 5</h3>
-        <h4>Community-Centric NFTs</h4>
-        <p>Mint your unique NFT avatars and become part of an ever-growing BetChain family.</p>
-      </div>
-    </div>
-    <div className="timeline-item">
-      <div className="timeline-content">
-        <h3>Step 6</h3>
-        <h4>Join the BetChain Community</h4>
-        <p>Become a part of the future of online betting today. Sign up, mint your NFT, and start playing!</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-
+                <div className="text-container">
+                    <h1>BetChain: The Pinnacle of Decentralized Betting</h1>
+                    <p>Experience the Thrill of Innovation</p>
+                </div>
+                <div className="timeline">
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 1</h2>
+                            <h3>Provably Fair Gaming</h3>
+                            <p>Borrow against your assets with confidence, thanks to real-time price data feeds ensuring
+                                accurate valuations.</p>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 2</h2>
+                            <h3>Cross-Chain Functionality</h3>
+                            <p>Seamlessly transfer assets across blockchains for a fluid betting experience.</p>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 3</h2>
+                            <h3>AI-Driven Gaming</h3>
+                            <p>Engage with games that learn from your preferences,
+                                offering a personalized touch to your gaming journey.</p>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 4</h2>
+                            <h3>DeFi Lending</h3>
+                            <p>Borrow against your assets with confidence,
+                                thanks to real-time price data feeds ensuring accurate valuations</p>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 5</h2>
+                            <h3>Community-Centric NFTs</h3>
+                            <p>Mint your unique NFT avatars and become part of an ever-growing BetChain family.</p>
+                        </div>
+                    </div>
+                    <div className="timeline-item">
+                        <div className={"step-card"}>
+                            <h2>Step 6</h2>
+                            <h3>Join the BetChain Community</h3>
+                            <p>Become a part of the future of online betting today. Sign up, mint your NFT, and start
+                                playing!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <GridPage/>
             {/* Footer */}
             <footer className="footer">
