@@ -212,69 +212,10 @@
   width: 100px;
   border-top: 2px dotted #00f;
   transform: translateX(-50%);
-  z-index: 0;
-}
-
-.circle {
-  position: absolute;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  background-color: gold;
-  border-radius: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
-.line {
-  position: absolute;
-  left: 50%;
-  width: 100px;
-  border-top: 2px dotted #00f;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-.line::after {
-  content: '';
-  position: absolute;
-  top: -4px;
-  right: -8px;
-  width: 0;
-  height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid #00f;
-  transform: rotate(90deg);
-}
-
-.circle:nth-child(1) {
-  top: 10%;
-}
-.line:nth-child(2) {
-  top: 10%;
-}
-.circle:nth-child(3) {
-  top: 30%;
-}
-.line:nth-child(4) {
-  top: 30%;
-}
-.circle:nth-child(5) {
-  top: 50%;
-}
-.line:nth-child(6) {
-  top: 50%;
-}
-.circle:nth-child(7) {
-  top: 70%;
-}
-.line:nth-child(8) {
-  top: 70%;
-}
-.circle:nth-child(9) {
-  top: 90%;
-}
-.line:nth-child(10) {
-  top: 90%;
+  height: 100%;
+  width: 4px;
+  background: white;
+  z-index: 1;
 }
 
 .timeline-item {
@@ -284,18 +225,8 @@
   width: 100%;
 }
 
-.timeline-item:nth-child(even) {
-  justify-content: flex-end;
-}
-
 .timeline-item:nth-child(odd) {
-  justify-content: flex-start;
-}
-
-.timeline-item .timeline-date {
-  width: 20%;
-  text-align: right;
-  padding-right: 10px;
+  flex-direction: row-reverse;
 }
 
 .timeline-item .timeline-content {
@@ -307,51 +238,36 @@
   text-align: left;
 }
 
-.timeline-item:nth-child(odd) .timeline-date {
-  text-align: left;
-  padding-left: 10px;
-}
-
-.timeline-item:nth-child(odd) .timeline-content {
-  text-align: right;
-  padding-right: 10px;
-}
-
-
-/* Styles for the new section with steps */
-.step-card {
-  width: 510px;
-  height: 150px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #2C2C4E;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: left;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  font-family: Arial, sans-serif;
-  position: relative;
-}
-
-.step-card h2 {
-  font-size: 18px;
+.timeline-item .timeline-content h3 {
   margin: 0 0 10px 0;
+  color: #61dafb;
+  font-size: 1.2em;
 }
-.step-card h3 {
-  font-size: 16px;
+
+.timeline-item .timeline-content h4 {
   margin: 0 0 10px 0;
-  font-weight: normal;
+  color: #61dafb;
 }
-.step-card p {
-  font-size: 14px;
+
+.timeline-item .timeline-content p {
   margin: 0;
 }
 
-/* LandingPage.css */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 20px;
+  width: 20px;
+  background: white;
+  border-radius: 50%;
+  border: 3px solid #61dafb;
+  z-index: 2;
+}
+
+* LandingPage.css */
 .grid-page {
   padding: 20px;
   text-align: center;
