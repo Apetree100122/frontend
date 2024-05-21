@@ -84,34 +84,65 @@ const HomePage = () => {
             {/* New Section with Text on Top and a Timeline Below */}
             <div className="timeline-section">
                 <div className="text-container">
-                    <h1>Timeline Section Heading</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque et urna nec tortor tristique
-                        posuere.</p>
+                    <h1>BetChain: The Pinnacle of Decentralized Betting</h1>
+                    <p>Experience the Thrill of Innovation</p>
                 </div>
                 <div className="timeline">
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
+                    <div className="circle"></div>
+                    <div className="line"></div>
                     <div className="timeline-item">
-                        <div className="timeline-date">January</div>
-                        <div className="timeline-content">Content for January</div>
+                        <div className={"step-card"}>
+                            <h2>Step 1</h2>
+                            <h3>Provably Fair Gaming</h3>
+                            <p>Borrow against your assets with confidence, thanks to real-time price data feeds ensuring
+                                accurate valuations.</p>
+                        </div>
                     </div>
                     <div className="timeline-item">
-                        <div className="timeline-date">February</div>
-                        <div className="timeline-content">Content for February</div>
+                        <div className={"step-card"}>
+                            <h2>Step 2</h2>
+                            <h3>Cross-Chain Functionality</h3>
+                            <p>Seamlessly transfer assets across blockchains for a fluid betting experience.</p>
+                        </div>
                     </div>
                     <div className="timeline-item">
-                        <div className="timeline-date">March</div>
-                        <div className="timeline-content">Content for March</div>
+                        <div className={"step-card"}>
+                            <h2>Step 3</h2>
+                            <h3>AI-Driven Gaming</h3>
+                            <p>Engage with games that learn from your preferences,
+                                offering a personalized touch to your gaming journey.</p>
+                        </div>
                     </div>
                     <div className="timeline-item">
-                        <div className="timeline-date">April</div>
-                        <div className="timeline-content">Content for April</div>
+                        <div className={"step-card"}>
+                            <h2>Step 4</h2>
+                            <h3>DeFi Lending</h3>
+                            <p>Borrow against your assets with confidence,
+                                thanks to real-time price data feeds ensuring accurate valuations</p>
+                        </div>
                     </div>
                     <div className="timeline-item">
-                        <div className="timeline-date">May</div>
-                        <div className="timeline-content">Content for May</div>
+                        <div className={"step-card"}>
+                            <h2>Step 5</h2>
+                            <h3>Community-Centric NFTs</h3>
+                            <p>Mint your unique NFT avatars and become part of an ever-growing BetChain family.</p>
+                        </div>
                     </div>
                     <div className="timeline-item">
-                        <div className="timeline-date">June</div>
-                        <div className="timeline-content">Content for June</div>
+                        <div className={"step-card"}>
+                            <h2>Step 6</h2>
+                            <h3>Join the BetChain Community</h3>
+                            <p>Become a part of the future of online betting today. Sign up, mint your NFT, and start
+                                playing!</p>
+                        </div>
                     </div>
                 </div>
             </div>
