@@ -4,8 +4,8 @@
     flex-direction: column;
     height: 100vh;
     background-color: #221C35;
+    color: white;
   }
-  
   .header {
     margin: 0 auto;
     display: flex;
@@ -13,7 +13,7 @@
     justify-content: space-between;
     padding: 20px;
     position: fixed;
-    width: 100%;
+    width: 95%;
     top: 0;
     left: 0;
     background-color: transparent; /* Fully transparent background */
@@ -24,119 +24,224 @@
     font-size: 1.2em;
   }
   
-  .header-buttons button {
+  .header-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .notification-button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  .connect-button {
+    display: flex;
+    align-items: center;
+    background-color: #607D8B; /* Blue-grey background */
+    color: white; /* White text */
+    font-weight: bold; /* Bold text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .connect-button .connect-logo {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .connect-button:hover {
+    background-color: #546E7A; /* Darker blue-grey on hover */
+  }
+  
+  .profile-image-container {
     margin-left: 10px;
   }
   
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
   .sidebar {
+    background-color: #221C35;
     position: fixed;
-    top: 60px; /* Adjust based on header height */
+    top: 80px; /* Adjust this based on your header height */
     left: 0;
     width: 100px;
-    height: calc(100% - 60px); /* Adjust based on header height */
-    background-color: #343a40;
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Ensures the sidebar stays above other content */
+    justify-content: space-between; /* Space out top and bottom sections */
+    height: calc(100vh - 15vh); /* Full height minus header */
   }
   
-  .sidebar button {
-    margin: 10px 20px;
-    padding: 10px;
-    color: #ffffff;
-    background-color: #495057;
+  .sidebar-top,
+  .sidebar-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sidebar-bottom img{
+    margin-top: 30px;
+  }
+
+  .sidebar-top img{
+    margin-bottom: 30px;
+    color: #fff;
+  }
+  
+  .sidebar-button {
+    background-color: transparent; 
     border: none;
-    text-align: left;
+    margin: 10px 0; /* Add spacing between buttons */
     cursor: pointer;
-    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  .sidebar button:hover {
-    background-color: #6c757d;
-  }
-
-  .main-content2{
-    margin-left: 120px; /* Adjust based on sidebar width */
-    padding: 20px;
-    padding-top: 80px; /* Increase this value */
-    flex-direction: row;
+  .sidebar-button img {
+    
+    width: 40px; /* Adjust the size as needed */
+    height: 40px;
+    background-color: transparent; 
+    display: block;
   }
   
-  .main-content2 h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+  .main-content2 {
+    margin-left: 220px; /* Adjust this based on your sidebar width */
+    padding-top: 100px; /* Adjust this based on your header height */
   }
-
+  
   .main-content21 {
     display: flex;
+    gap: 10px;
   }
   
-  .input-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .input-container {
+.input-container  , .upload-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-right: 10px;
+    gap: 10px;
   }
-  
-  .input-container input {
-    padding: 64px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+  .input-container input{
+    height: 100px;
+    width: 300px;
+    margin-right: 100px;
   }
-  
-  .input-container button,
-  .upload-container button {
-    padding: 8px 16px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  .input-container button{
+    height: 20px;
+    width: 300px;
+    margin-right: 100px;
   }
   
   .upload-container {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    gap: 10px;
   }
   
-  .upload-container .dropdown {
-    margin-right: 10px;
-    padding: 64px;
+  .upload-container input[type="file"] {
+    display: none; /* Hide the original file input */
   }
   
-  .upload-container select {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+  .upload-container label {
+    display: inline-block;
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    font-size: 16px; /* Increase font size for better visibility */
+    padding: 10px;
+    background-color: #007bff; /* Background color */
+    color: white; /* Text color */
+    text-align: center; /* Center the text */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+  }
+  
+  .upload-container label:hover {
+    background-color: #0056b3; /* Darker background on hover */
   }
 
   .model-container {
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
-    margin-top: 20px;
+    gap: 20px;
   }
   
   .model-option {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-right: 20px; /* Add some spacing between the model options */
   }
-  
+
   .model-option img {
     width: 100px;
     height: 100px;
     margin-right: 10px;
   }
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000; /* Make sure it's above other content */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .modal-content h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .generated-image {
+    width: 100px; /* Adjust size as needed */
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content p {
+    font-size: 1em;
+    margin: 20px 0;
+  }
+  
+  .prompt-text {
+    color: black; /* Set the prompt text color to black */
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .modal-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+  }
+  
