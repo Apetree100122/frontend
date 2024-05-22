@@ -3,6 +3,7 @@ import './DiscoverPage.css';
 import image1 from './assets/lc.png';
 import image2 from './assets/lc.png';
 import image3 from './assets/lc.png';
+import Sidebar from './Sidebar';
 
 const DiscoverPage = () => {
   return (
@@ -16,13 +17,7 @@ const DiscoverPage = () => {
           <button>Connect</button>
         </div>
       </header>
-      <aside className="sidebar">
-        <button>AI Art</button>
-        <button>DeFi</button>
-        <button>Home</button>
-        <button>Settings</button>
-        <button>Help</button>
-      </aside>
+      <Sidebar />
       <main className="main-content1">
         <div className="header-content">
           <h1>Good Morning, Yo!</h1>
