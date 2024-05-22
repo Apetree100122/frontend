@@ -7,17 +7,19 @@
     color: white;
   }
   .header {
+    
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     position: fixed;
-    width: 95%;
+    width: 97.5%;
     top: 0;
     left: 0;
     background-color: transparent; /* Fully transparent background */
-    z-index: 1000; /* Ensure header is above other content */
+    z-index: 10000; /* Ensure header is above other content */
+    box-shadow: 0 0 1px 1px rgba(255, 215, 0, 0.6); /* Golden glow */
   }
   
   .logo-button button {
@@ -78,20 +80,23 @@
     border-radius: 50%;
   }
 
-  .sidebar {
-    background-color: #221C35;
-    position: fixed;
-    top: 80px; /* Adjust this based on your header height */
-    left: 0;
-    width: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Space out top and bottom sections */
-    height: calc(100vh - 15vh); /* Full height minus header */
-  }
+.sidebar {
+  background-color: #221C35;
+  position: fixed;
+  top: 85px; /* Adjust this based on your header height */
+  left: 0;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Space out top and bottom sections */
+  height: calc(100vh - 15vh); /* Full height minus header */
+  box-shadow: 0 1px 0 1px rgba(255, 215, 0, 0.6); /* Golden glow on the right */
+}
+
   
   .sidebar-top,
   .sidebar-bottom {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,9 +106,16 @@
     margin-top: 30px;
   }
 
+  .sidebar-bottom h6{
+    margin-top: 0;
+  }
+
   .sidebar-top img{
-    margin-bottom: 30px;
+    margin-top: 30px;
     color: #fff;
+  }
+  .sidebar-top h6{
+    margin-top: 0;
   }
   
   .sidebar-button {
@@ -117,11 +129,16 @@
   }
   
   .sidebar-button img {
-    
+    margin-bottom: 0;
     width: 40px; /* Adjust the size as needed */
     height: 40px;
     background-color: transparent; 
     display: block;
+  }
+
+  .sidebar-button h6{
+    margin-top: 0;
+    margin-bottom: 0;
   }
   
   .main-content2 {
@@ -135,19 +152,56 @@
   }
   
 .input-container  , .upload-container {
+   
     display: flex;
     flex-direction: column;
     gap: 10px;
   }
+  .input-container input[type="text"] {
+    text-align: left; /* Align text to the left */
+  }
+  
+  .input-container input[type="text"]::placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Adjust padding as needed */
+    color: #888; /* Placeholder text color */
+  }
+
   .input-container input{
+    border-radius: 10px;
+    background-color:  #302A4C;
     height: 100px;
     width: 300px;
     margin-right: 100px;
   }
   .input-container button{
-    height: 20px;
+    height: 30px;
     width: 300px;
     margin-right: 100px;
+    background-color: gold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 800;
+    margin: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0;
+  }
+
+  .upload-button button{
+    height: 30px;
+    width: 300px;
+    margin-right: 100px;
+    background-color: gold;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 800;
+    margin: 0%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 0;
   }
   
   .upload-container {
@@ -155,28 +209,63 @@
     flex-direction: column;
     gap: 10px;
   }
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
-  .upload-container input[type="file"] {
-    display: none; /* Hide the original file input */
+  .file-upload-wrapper {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Add some spacing between the small image and the text */
+  }
+
+.temp-div{
+  display: flex;
+  flex-direction: column;
+
+}
+
+  .upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    width: 300px; /* Adjust the width as needed */
+    height: 200px; /* Adjust the height as needed */
+    padding: 10px;
+    background-color: #302A4C; /* Background color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    margin-bottom: 10px;
+  }
+  
+  .file-upload-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    margin-bottom: 5px; /* Add some spacing between the small image and the text */
+  }
+  
+  .upload-icon {
+    width: 20px; /* Adjust size of the small image */
   }
   
   .upload-container label {
-    display: inline-block;
-    width: 300px; /* Adjust the width as needed */
-    height: 200px; /* Adjust the height as needed */
-    font-size: 16px; /* Increase font size for better visibility */
-    padding: 10px;
-    background-color: #007bff; /* Background color */
-    color: white; /* Text color */
-    text-align: center; /* Center the text */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Adjust font size of the "Choose File" text */
+    text-align: center; /* Center the text horizontally */
   }
   
   .upload-container label:hover {
     background-color: #0056b3; /* Darker background on hover */
   }
-
+  
+  .upload-container input[type="file"] {
+    display: none; /* Hide the original file input */
+  }
+  
   .model-container {
     display: flex;
     gap: 20px;
@@ -243,5 +332,27 @@
     margin: 5px;
     padding: 10px 20px;
     font-size: 1em;
+  }
+  
+  .model-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add smooth transition */
+  }
+  
+  .model-option img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .model-option.selected {
+    background-color: #FFD700; /* Yellow background for selected model */
+  }
+  
+  .model-option:not(.selected):hover {
+    background-color: #333; /* Dark background on hover for deselected model */
   }
   
