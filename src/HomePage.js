@@ -7,6 +7,7 @@ import image1 from "./assets/defi.png";
 import image2 from "./assets/slot.png";
 import image3 from "./assets/ai.png";
 import GridPage from "./GridPage";
+import "./LandingPage.css";
 
 const HomePage = () => {
     return (
@@ -22,12 +23,12 @@ const HomePage = () => {
                     <ul>
                         <li><Link to="/discover">Discover</Link></li>
                         <li><Link to="/ai">AI Generation</Link></li>
-                        <li><Link to="/how-it-works">How it Works</Link></li>
+                        <li><Link to="/game">Play</Link></li>
                     </ul>
                 </nav>
                 {/* Get Started Button */}
                 <div className="get-started">
-                    <button>Get Started</button>
+                    <button><Link to="/defi">My Wallet</Link></button>
                 </div>
             </header>
             {/* Main Content */}

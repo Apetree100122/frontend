@@ -83,7 +83,7 @@ const AIArt = () => {
   </div>
 </aside>
 
-      <main className="main-content2">
+      <main className="main-content3">
         <h1>Generate Profile Pics with AI</h1>
         <div className='main-content21'>
           <div className="input-container">

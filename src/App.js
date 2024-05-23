@@ -5,6 +5,8 @@ import HomePage from './HomePage';
 import DiscoverPage from './DiscoverPage';
 import './LandingPage.css';
 import AIArt from './AIArt';
+import DefiPage from './DefiPage';
+import RoulettePage from './RoulettePage';
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/discover" element={<DiscoverPage/>} />
         <Route path="/" element={<HomePage/>} />
         <Route path='/ai' element={<AIArt/>} />
+        <Route path='/defi' element={<DefiPage/>} />
+        <Route path='/game' element={<RoulettePage/>} />
         </Routes>
     </Router>
   );
