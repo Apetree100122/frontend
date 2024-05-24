@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import './AIArt.css';
-import model1Image from './assets/lc.png';
-import model2Image from './assets/lc.png';
-import image3 from './assets/lc.png';
-import profileImage from './assets/lc.png';
-import casinoIcon from './assets/lc.png';  // Replace with actual paths to your icons
-import defiIcon from './assets/invoice-1.png';
-import aiArtIcon from './assets/photo-gallery.png';
-import helpIcon from './assets/school.png';
-import settingsIcon from './assets/settings.png';
-import console from './assets/joystick.png'
-import wallet from './assets/wallet.png'
-import uploadIcon from './assets/photo-gallery.png'
+import model1Image from '../assets/lc.png';
+import model2Image from '../assets/lc.png';
+import image3 from '../assets/lc.png';
+import profileImage from '../assets/lc.png';
+import casinoIcon from '../assets/lc.png';  // Replace with actual paths to your icons
+import defiIcon from '../assets/invoice-1.png';
+import aiArtIcon from '../assets/photo-gallery.png';
+import helpIcon from '../assets/school.png';
+import settingsIcon from '../assets/settings.png';
+import console from '../assets/joystick.png'
+import wallet from '../assets/wallet.png'
+import uploadIcon from '../assets/photo-gallery.png'
 
 const AIArt = () => {
   const [isLoading, setIsLoading] = useState(false);

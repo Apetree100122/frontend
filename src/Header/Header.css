@@ -1,0 +1,72 @@
+.header {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 97.5%;
+    top: 0;
+    left: 0;
+    background-color:#221C35;
+    z-index: 10000;
+    box-shadow: 0 0 1px 1px rgba(255, 215, 0, 0.6);
+}
+
+.logo-button button {
+    font-size: 1.2em;
+}
+
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.notification-button {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.connect-button {
+    display: flex;
+    align-items: center;
+    background-color: #607D8B;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.connect-button .connect-logo {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.connect-button:hover {
+    background-color: #546E7A;
+}
+
+.profile-image-container {
+    margin-left: 10px;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

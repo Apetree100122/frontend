@@ -1,34 +1,17 @@
 import React from 'react';
 import './DefiPage.css';
-import profileImage from './assets/lc.png';
-import casinoIcon from './assets/lc.png';
-import defiIcon from './assets/invoice-1.png';
-import aiArtIcon from './assets/photo-gallery.png';
-import helpIcon from './assets/school.png';
-import settingsIcon from './assets/settings.png';
-import console from './assets/joystick.png';
-import wallet from './assets/wallet.png';
+import profileImage from '../assets/lc.png';
+import casinoIcon from '../assets/lc.png';
+import defiIcon from '../assets/invoice-1.png';
+import aiArtIcon from '../assets/photo-gallery.png';
+import helpIcon from '../assets/school.png';
+import settingsIcon from '../assets/settings.png';
+import console from '../assets/joystick.png';
+import wallet from '../assets/wallet.png';
 
 const DefiPage = () => {
   return (
     <div className="defi-page">
-      <header className="header">
-        <div className="logo-button">
-          <button>Logo</button>
-        </div>
-        <div className="header-buttons">
-          <button className="notification-button">
-            <span className="notification-badge"></span>
-          </button>
-          <button className="connect-button">
-            <img src={wallet} alt="Wallet Logo" className="connect-logo" />
-            Connect
-          </button>
-          <div className="profile-image-container">
-            <img src={profileImage} alt="Profile" className="profile-image" />
-          </div>
-        </div>
-      </header>
       <aside className="sidebar">
         <div className="sidebar-top">
           <a href='fjr.cpm'><img height={30} src={console} alt="Casino" /></a>
