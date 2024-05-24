@@ -40,7 +40,7 @@ const DiscoverPage = () => {
 
           <div className="image-gallery">
             {games.map((game, index) => (
-                <div className="image-container" key={index}>
+                <div className="image-container1" key={index}>
                   <img src={game.image} alt={`Image ${index + 1}`}/>
                   <div className="image-info">
                     <span className="game-name">{game.name}</span>

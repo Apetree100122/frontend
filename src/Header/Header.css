@@ -8,9 +8,9 @@
     width: 97.5%;
     top: 0;
     left: 0;
-    background-color:#221C35;
+    background-color:transparent;
     z-index: 10000;
-    box-shadow: 0 0 1px 1px rgba(255, 215, 0, 0.6);
+    /* box-shadow: 0 0 1px 1px rgba(255, 215, 0, 0.6); */
 }
 
 .logo-button button {

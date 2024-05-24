@@ -8,6 +8,7 @@ import image2 from "./assets/slot.png";
 import image3 from "./assets/ai.png";
 import GridPage from "./GridPage";
 import "./LandingPage.css";
+import walletLogo from './assets/wallet.png'
 
 const HomePage = () => {
     return (
@@ -27,15 +28,23 @@ const HomePage = () => {
                     </ul>
                 </nav>
                 {/* Get Started Button */}
+               
                 <div className="get-started">
-                    <button><Link to="/defi">My Wallet</Link></button>
-                </div>
+    <button className="wallet-button">
+        <img src={walletLogo} alt="Wallet" style={{ verticalAlign: "middle", marginRight: "10px", width: "30px", height: "auto" }} /> {/* Wallet logo */}
+        <Link to="/defi" style={{ textDecoration: "none", color: "white", verticalAlign: "middle" }}>My Wallet</Link>
+    </button>
+</div>
+
             </header>
             {/* Main Content */}
             <div className="main-content">
                 {/* Text Container */}
                 <div className="text-container">
-                    <h1>Super NFT Marketplace</h1>
+                    <h1>Welcome to<br />BetChain!</h1>
+                    <h6>A new era in online betting. Combining artificial intelligence with blockchain’s security</h6>
+                    <button>Get Started</button>
+                    <span><button>Place Bets</button></span>
                 </div>
                 {/* Image Container */}
                 <div className="image-container">
@@ -68,17 +77,20 @@ const HomePage = () => {
                     </p>
                 </div>
                 {/* Images Container */}
-                <div className="images-container">
-                    <div className={"custom-card"}>
-                        <img className={"test-img"} src={image1} alt="Image 1"/>
-                    </div>
-                    <div className={"custom-card"}>
-                        <img src={image2} alt="Image 2"/>
-                    </div>
-                    <div className={"custom-card"}>
-                        <img src={image3} alt="Image 3"/>
-                    </div>
-                </div>
+<div className="images-container">
+          <div className="custom-card">
+            <img className="test-img" src={image1} alt="Image 1" />
+            <div className="image-text">DeFi Innovations</div>
+          </div>
+          <div className="custom-card">
+            <img className="test-img" src={image2} alt="Image 2" />
+            <div className="image-text">Slot Machines</div>
+          </div>
+          <div className="custom-card">
+            <img className="test-img" src={image3} alt="Image 3" />
+            <div className="image-text">AI Games</div>
+          </div>
+        </div>
             </div>
             {/* New Section with Text on Top and a Timeline Below */}
             <div className="timeline-section">

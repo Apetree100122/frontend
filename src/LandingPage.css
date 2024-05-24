@@ -2,6 +2,22 @@
 .App {
   text-align: center;
   overflow-x: hidden;
+  position: relative;
+  color: white;
+}
+
+/* Stars Background */
+.stars-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('./assets/star-filled.svg');
+  background-repeat: repeat;
+  opacity: 0.5;
+  pointer-events: none;  /* Ensure it's not interactive */
+  z-index: -1;  /* Place it behind other content */
 }
 
 /* Header styles */
@@ -17,6 +33,7 @@
   left: 0;
   background-color: transparent; /* Fully transparent background */
   z-index: 1000; /* Ensure header is above other content */
+  box-shadow:none;
 }
 
 .logo img {
@@ -48,8 +65,8 @@
 }
 
 .get-started button {
-  background-color: #61dafb;
-  color: white;
+  background-color: #ffd700; /* Yellow background */
+  color: white; /* White text */
   padding: 10px 20px;
   border: none;
   cursor: pointer;
@@ -58,38 +75,73 @@
 }
 
 .get-started button:hover {
-  background-color: #4fa4cf;
+  background-color: white; /* White background on hover */
+  color: #ffd700; /* Yellow text on hover */
+  border: 2px solid #ffd700; /* Yellow border on hover */
 }
 
 .main-content {
-  display: flex;
   background: 
-    linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
-    linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
-    url('./assets/casino.png');
-  
-  background-size: cover;
-  background-position: center;
-  
-  min-height: 100vh;
-  
-  flex-direction: row;
+  linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
+  linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
+  url('./assets/casino.png');
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  color: white;
+  width: 100%;
+  padding: 40px;
+  background-color: #221c35;
+  margin-top: 7.5%; /* Add margin to ensure content is pushed down */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
 }
 
-.text-container {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: left;
-  font-size: 1.5rem;
+
+.main-content .text-container {
+    position: relative;
+    top: -140px;
+    margin: 0;
+    align-items: start;
+    flex: 1;
+    padding: 5px;
+    margin-right: 0%;
+    left: 7%;
+    text-align:  left; /* Align text to the right */
+
 }
+
+.main-content .text-container button {
+  margin-right: 5%;
+  background-color: #ffd700; /* Yellow background */
+  color: white; /* White text */
+  border: 2px solid white; /* White border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor style */
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Smooth transition */
+}
+
+.main-content .text-container button:hover {
+  background-color: white; /* White background on hover */
+  color: #ffd700; /* Yellow text on hover */
+  border-color: #ffd700; /* Yellow border on hover */
+}
+.text-container h1 {
+  font-size: 70px;
+  margin-bottom: 20px;
+
+}
+
+.text-container h6 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
 
 .image-container {
+  margin-top: 9px;
   width: 60%;
   display: flex;
   align-items: center;
@@ -97,7 +149,7 @@
 }
 
 .image-container img {
-  max-width: 100%;
+  max-width: 70%;
   height: auto;
 }
 
@@ -111,7 +163,8 @@
 }
 
 .reversed-content .text-container {
-  text-align: right;
+  font-size: 30px;
+  text-align: left;
 }
 
 .reversed-content .image-container {
@@ -124,21 +177,32 @@
 
 .top-text-images-below {
   padding: 20px;
-  text-align:  center;
+  text-align: center;
   color: white;
   background-color: rgba(33, 28, 51, 1);
 }
 
 .top-text-images-below .text-container {
+  padding: 30px;
   margin-bottom: 20px;
+  margin-top: 45px;
   align-items: center;
   width: 100%;
 }
 
 .top-text-images-below .text-container p {
+  margin-top: 70px;
   width: 40%;
-  font-size: 16px;
-  margin: 0 auto;
+  font-size: 20px;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.top-text-images-below .text-container h2 {
+  width: 40%;
+  font-size: 30px;
+  margin-bottom: 70px;
+  margin: auto;
 }
 
 .top-text-images-below .images-container {
@@ -150,7 +214,7 @@
 .custom-card {
   position: relative;
   width: 400px; /* Adjust size as necessary */
-  height: 460px; /* Adjust size as necessary */
+  height: 370px; /* Adjust size as necessary */
   border: 3px solid gold; /* Gold border */
   border-radius: 20px; /* Rounded corners */
   overflow: hidden;
@@ -170,10 +234,24 @@
   justify-content: center;
 }
 
+.image-text {
+  position: absolute;
+  bottom: 10px; /* Adjust position as necessary */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.2rem; /* Adjust font size as necessary */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 5px 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .top-text-images-below .images-container img {
   width: 100%;
   height: 100%;
 }
+
 .timeline-section {
   padding: 40px 20px;
   text-align: center;
@@ -185,6 +263,7 @@
   width: 100%;
   align-items: center;
   margin-bottom: 40px;
+  font-size: 30px;
 }
 
 .timeline {
@@ -273,12 +352,12 @@
   background-color: rgba(33, 28, 51, 1);
 }
 
-.grid-page .text-container {
+.grid-page .text-container h1 {
   width: 100%;
   align-items: center;
   background-color: #221C35;
   color: white;
-
+  font-size: 30px;
 }
 
 .grid-page .image-grid {
@@ -294,7 +373,6 @@
   margin-bottom: 20px;
 }
 
-/* LandingPage.css */
 .footer {
   background-color: rgba(43,37,61,255);
   color: white;
