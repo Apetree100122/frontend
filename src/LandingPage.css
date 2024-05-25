@@ -1,9 +1,11 @@
 /* General styles */
+
 .App {
   text-align: center;
   overflow-x: hidden;
   position: relative;
   color: white;
+
 }
 
 /* Stars Background */
@@ -21,7 +23,7 @@
 }
 
 /* Header styles */
-.header {
+.header1 {
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -80,35 +82,48 @@
   border: 2px solid #ffd700; /* Yellow border on hover */
 }
 
+
 .main-content {
+  position: relative; /* Ensure the container is positioned relatively */
   background: 
-  linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
-  linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
-  url('./assets/casino.png');
+    linear-gradient(180deg, rgba(34, 28, 53, 0) 39.36%, #221C35 100%),
+    linear-gradient(270deg, rgba(34, 28, 53, 0.6) 52.19%, rgba(34, 28, 53, 0.6) 100%),
+    url('./assets/casino.png');
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   padding: 40px;
   background-color: #221c35;
-  margin-top: 7.5%; /* Add margin to ensure content is pushed down */
+  margin-top: 0; /* Remove margin to push content to the top */
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: top center; /* Position the background image at the top center */
 }
 
-
+.main-content::before {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Position at the bottom */
+  left: 0;
+  width: 100%;
+  height: 100px; /* Adjust height of the smudge */
+  background: linear-gradient(180deg, rgba(34, 28, 53, 0) 0%, rgba(34, 28, 53, 0.6) 100%);
+  z-index: 0; /* Ensure the smudge is behind the content */
+}
 .main-content .text-container {
-    position: relative;
-    top: -140px;
-    margin: 0;
-    align-items: start;
-    flex: 1;
-    padding: 5px;
-    margin-right: 0%;
-    left: 7%;
-    text-align:  left; /* Align text to the right */
-
+  position: relative;
+  z-index: 1; /* Ensure the text is above the smudge */
+  top: -5px;
+  left: 70px;
+  right: 0%;
+  margin: 0;
+  align-items: flex-start;
+  flex: 1;
+  padding: 5px;
+  margin-right: 0%;
+  left: 7%;
+  text-align: left; /* Align text to the left */
 }
 
 .main-content .text-container button {
@@ -128,9 +143,10 @@
   color: #ffd700; /* Yellow text on hover */
   border-color: #ffd700; /* Yellow border on hover */
 }
+
 .text-container h1 {
-  font-size: 70px;
-  margin-bottom: 20px;
+  font-size: 90px;
+  margin-bottom: 10px;
 
 }
 
@@ -139,19 +155,44 @@
   margin-bottom: 20px;
 }
 
-
 .image-container {
-  margin-top: 9px;
+  position: relative;
+  top: 120px;
+  right: 50px;
   width: 60%;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1; /* Ensure the image is above the smudge */
 }
 
 .image-container img {
+  border-radius: 40px;
   max-width: 70%;
   height: auto;
 }
+
+.horizontal-line {
+  position: relative;
+  top: 20px;
+  left: -70px;
+  height: 2px;
+  background-color: #ffd700; /* Yellow color */
+  width: calc(100% + 90px); /* Adjust based on the text-container's left offset */
+  z-index: -1; /* Place it behind the text */
+}
+
+.horizontal-line::before {
+  content: '';
+  position: absolute;
+  top: -3px; /* Adjust vertically to align with the line */
+  left: -10px; /* Adjust horizontally to align with the start of the line */
+  width: 8px; /* Width of the dot */
+  height: 8px; /* Height of the dot */
+  background-color: #ffd700; /* Yellow color */
+  border-radius: 50%; /* Make it a circle */
+}
+
 
 .reversed-content {
   display: flex;
@@ -345,33 +386,108 @@
   border: 3px solid #61dafb;
   z-index: 2;
 }
+.grid-page {
+  padding: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.text-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
 
 .grid-page {
   padding: 20px;
+  background-color:#221C35;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.grid-page .text-container h1{
+  font-size:30px;
   text-align: center;
-  background-color: rgba(33, 28, 51, 1);
-}
-
-.grid-page .text-container h1 {
-  width: 100%;
-  align-items: center;
-  background-color: #221C35;
-  color: white;
-  font-size: 30px;
-}
-
-.grid-page .image-grid {
-  align-items: center;
-  background-color: #221C35;
-  color: white;
-}
-
-.grid-page .image-grid img {
-  width: 45%;
-  max-width: 70%;
-  height: auto;
   margin-bottom: 20px;
 }
+
+.grid-page .text-container{
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px; /* Less spacing between items */
+  justify-items: center;
+  margin-bottom: 80px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  background-color:#352b57;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: 350px; /* Rectangular width */
+  height: 80px; /* Adjusted height */
+  position: relative; /* To position the cut */
+}
+
+.grid-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-top: 20px solid #1a1a1a;
+  border-bottom-right-radius: 8px; /* Ensure the cut is in sync with the border radius */
+}
+
+.grid-item img {
+  width: 30px; /* Adjust the size to fit */
+  height: 30px;
+  object-fit: contain;
+  margin-right: 10px;
+}
+
+.partner-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.partner-info span {
+  font-size: 16px;
+}
+.grid-item button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 14px; /* Adjusted to fit the button within the rectangle */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.grid-item button:hover {
+  background-color: #1c86ee;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+
 
 .footer {
   background-color: rgba(43,37,61,255);

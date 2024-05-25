@@ -162,8 +162,9 @@
   }
   
   .modal-content {
-    background-color: #fff;
+    background-color:#221C35;
     padding: 20px;
+    color: white;
     border-radius: 5px;
     text-align: center;
   }
@@ -173,9 +174,10 @@
     font-size: 1.5em;
   }
   
+  
   .generated-image {
-    width: 100px; /* Adjust size as needed */
-    height: 100px;
+    width: 400px; /* Adjust size as needed */
+    height: 400px;
     margin-bottom: 20px;
   }
   
@@ -183,23 +185,44 @@
     font-size: 1em;
     margin: 20px 0;
   }
-  
   .prompt-text {
-    color: black; /* Set the prompt text color to black */
-  }
+    color: white; /* Set the prompt text color to black */
+    font-weight: bold; /* Make text bold */
+    font-family: Arial, sans-serif; /* Change font family if needed */
+}
   
   .modal-buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
   }
+
+  .mint-button {
+    background-color: yellow; /* Yellow background for mint button */
+    color: #221C35; /* Text color */
+}
+
+.mint-button:hover {
+    background-color: #FFD700; /* Lighter yellow on hover */
+}
+
+.cancel-button {
+    background-color: white; /* White background for cancel button */
+    color: #221C35; /* Text color */
+}
+
+.cancel-button:hover {
+    background-color: #f0f0f0; /* Lighter grey on hover */
+}
   
-  .modal-buttons button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1em;
-  }
-  
+.modal-buttons button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
   .model-option {
     display: flex;
     flex-direction: column;
@@ -221,4 +244,5 @@
   .model-option:not(.selected):hover {
     background-color: #333; /* Dark background on hover for deselected model */
   }
+  
   

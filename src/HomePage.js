@@ -14,7 +14,7 @@ const HomePage = () => {
     return (
         <div className="App">
             {/* Header */}
-            <header className="header">
+            <header className="header1">
                 {/* Logo */}
                 <div className="logo">
                     <img src={logo} alt="Logo"/>
@@ -39,18 +39,20 @@ const HomePage = () => {
             </header>
             {/* Main Content */}
             <div className="main-content">
-                {/* Text Container */}
-                <div className="text-container">
-                    <h1>Welcome to<br />BetChain!</h1>
-                    <h6>A new era in online betting. Combining artificial intelligence with blockchain’s security</h6>
-                    <button>Get Started</button>
-                    <span><button>Place Bets</button></span>
-                </div>
-                {/* Image Container */}
-                <div className="image-container">
-                    <img src={controlVImage} alt="Control V"/>
-                </div>
-            </div>
+    {/* Text Container */}
+    <div className="text-container">
+        <h1>Welcome to<br />BetChain!</h1>
+        <div className="horizontal-line"></div>
+        <h6>A new era in online betting. Combining<br /> artificial intelligence with <br />blockchain’s security</h6>
+        <button>Get Started</button>
+        <span><button>Place Bets</button></span>
+    </div>
+    {/* Image Container */}
+    <div className="image-container">
+        <img src={controlVImage} alt="Control V"/>
+    </div>
+</div>
+
             {/* Reversed Content */}
             <div className="reversed-content">
                 {/* Image Container */}

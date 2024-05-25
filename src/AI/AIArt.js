@@ -134,18 +134,18 @@ const AIArt = () => {
         </div>
       )}
 
-      {generatedImage && (
-        <div className="modal">
-          <div className="modal-content">
-            <img src={generatedImage} alt="Generated" className="generated-image" />
-            <p className="prompt-text">{prompt}</p>
-            <div className="modal-buttons">
-              <button onClick={handleMint}>Mint</button>
-              <button onClick={handleCancel}>Cancel</button>
-            </div>
-          </div>
-        </div>
-      )}
+{generatedImage && (
+  <div className="modal">
+    <div className="modal-content">
+      <img src={generatedImage} alt="Generated" className="generated-image" />
+      <p className="prompt-text">{prompt}</p>
+      <div className="modal-buttons">
+        <button className="mint-button" onClick={handleMint}>Mint</button>
+        <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+      </div>
+    </div>
+  </div>
+)}
     </div>
   );
 };
