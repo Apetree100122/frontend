@@ -6,7 +6,7 @@ import profileImage from "../assets/lc.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from "prop-types";
-
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 // Header.PropTypes = {
 //     image1: PropTypes.string,
 //     image2: PropTypes.string,
@@ -31,10 +31,7 @@ const Header = () => {
                 <button className="notification-button">
                         <FontAwesomeIcon className={"notification-badge"} color={"gold"} icon={faBell} size="2x"/>
                 </button>
-                <button className="connect-button">
-                    <img src={wallet} alt="Wallet Logo" className="connect-logo"/>
-                    Connect
-                </button>
+                    <ConnectButton />
                 <div className="profile-image-container">
                     <img src={profileImage} alt="Profile" className="profile-image"/>
                 </div>
