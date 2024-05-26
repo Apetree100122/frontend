@@ -20,6 +20,7 @@
 .header-buttons {
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 .notification-button {
@@ -29,20 +30,15 @@
     cursor: pointer;
 }
 
-.notification-badge {
-    position: absolute;
-    top: 5px; /* Adjust vertical position */
-    right: 5px; /* Adjust horizontal position */
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border-radius: 50%;
-}
+/*.notification-badge {*/
+/*    position: absolute;*/
+/*    display: flex;*/
+/*}*/
 
 .connect-button {
     display: flex;
     align-items: center;
-    background-color: yellow; /* Set background color to yellow */
+    background-color: gray; /* Set background color to yellow */
     color: white; /* Set text color to black */
     font-weight: bold;
     padding: 10px 20px;

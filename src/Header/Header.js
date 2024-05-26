@@ -1,7 +1,10 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import './Header.css';
 import wallet from "../assets/wallet.png";
 import profileImage from "../assets/lc.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBell } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from "prop-types";
 
 // Header.PropTypes = {
@@ -13,14 +16,20 @@ import PropTypes from "prop-types";
 
 const Header = () => {
 
+    const navigate = useNavigate();
+
+    const handleHomeAction = () => {
+        navigate('/')
+    }
+
     return (
         <header className="header">
             <div className="logo-button">
-                <button>Logo</button>
+                <button onClick={handleHomeAction}>Logo</button>
             </div>
             <div className="header-buttons">
                 <button className="notification-button">
-                    <span className="notification-badge"></span>
+                        <FontAwesomeIcon className={"notification-badge"} color={"gold"} icon={faBell} size="2x"/>
                 </button>
                 <button className="connect-button">
                     <img src={wallet} alt="Wallet Logo" className="connect-logo"/>

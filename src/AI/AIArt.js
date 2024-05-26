@@ -12,6 +12,8 @@ import settingsIcon from '../assets/settings.png';
 import console from '../assets/joystick.png'
 import wallet from '../assets/wallet.png'
 import uploadIcon from '../assets/photo-gallery.png'
+import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 
 const AIArt = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -49,40 +51,8 @@ const AIArt = () => {
 
   return (
     <div className="ai-page">
-<header className="header">
-  <div className="logo-button">
-    <button>Logo</button>
-  </div>
-  <div className="header-buttons">
-    <button className="notification-button">
-      <span className="notification-badge"></span>
-    </button>
-    <button className="connect-button">
-      <img src={wallet} alt="Wallet Logo" className="connect-logo" />
-      Connect
-    </button>
-    <div className="profile-image-container">
-      <img src={profileImage} alt="Profile" className="profile-image" />
-    </div>
-  </div>
-</header>
-<aside className="sidebar">
-  <div className="sidebar-top">
-    <a href='fjr.cpm'><img height={30} src={console} alt="Casino" /></a>
-    <h6>Casino</h6>
-    <a href='fjr.cpm'><img height={30} src={defiIcon} alt="DeFi" /></a>
-    <h6>Defi</h6>
-    <a href='fjr.cpm'><img height={30} src={aiArtIcon} alt="AI Art" /></a>
-    <h6>AI</h6>
-  </div>
-  <div className="sidebar-bottom">
-    <a href='fjr.cpm'><img height={30} src={helpIcon} alt="Help" /></a>
-    <h6>Help</h6>
-    <a href='fjr.cpm'><img height={25} src={settingsIcon} alt="Settings" /></a>
-    <h6>Settings</h6>
-  </div>
-</aside>
-
+      <Header />
+      <Sidebar />
       <main className="main-content3">
         <h1>Generate Profile Pics with AI</h1>
         <div className='main-content21'>

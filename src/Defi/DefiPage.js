@@ -9,27 +9,13 @@ import settingsIcon from '../assets/settings.png';
 import console from '../assets/joystick.png';
 import Header from '../Header/Header';
 import wallet from '../assets/wallet.png';
+import Sidebar from "../Sidebar/Sidebar";
 
 const DefiPage = () => {
   return (
     <div className="defi-page">
       <Header/>
-      <aside className="sidebar">
-        <div className="sidebar-top">
-          <a href='fjr.cpm'><img height={30} src={console} alt="Casino" /></a>
-          <h6>Casino</h6>
-          <a href='fjr.cpm'><img height={30} src={defiIcon} alt="DeFi" /></a>
-          <h6>Defi</h6>
-          <a href='fjr.cpm'><img height={30} src={aiArtIcon} alt="AI Art" /></a>
-          <h6>AI</h6>
-        </div>
-        <div className="sidebar-bottom">
-          <a href='fjr.cpm'><img height={30} src={helpIcon} alt="Help" /></a>
-          <h6>Help</h6>
-          <a href='fjr.cpm'><img height={25} src={settingsIcon} alt="Settings" /></a>
-          <h6>Settings</h6>
-        </div>
-      </aside>
+      <Sidebar/>
       <main className="main-content5">
         <div className="welcome-section">
           <h1>Welcome To DeFi</h1>
