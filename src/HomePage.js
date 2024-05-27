@@ -1,8 +1,8 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import logo from "./logo.svg";
+import logo from "./assets/Crypto-Casino-Logo.png"
 import controlVImage from "./assets/download.png";
-import templeImage from "./assets/lc.png";
+import templeImage from "./assets/Crypto-Casino-Logo.png";
 import image1 from "./assets/defi.png";
 import image2 from "./assets/slot.png";
 import image3 from "./assets/ai.png";
@@ -11,6 +11,7 @@ import "./LandingPage.css";
 import walletLogo from './assets/wallet.png'
 
 const HomePage = () => {
+
     return (
         <div className="App">
             {/* Header */}
@@ -47,7 +48,7 @@ const HomePage = () => {
             <div className="main-content">
                 {/* Text Container */}
                 <div className="text-container">
-                    <h1>Welcome to<br/>BetChain!</h1>
+                    <h1>Welcome to<br/>CryptoCasino!</h1>
                     <div className="horizontal-line"></div>
                     <h6>A new era in online betting. Combining<br/> artificial intelligence with <br/>blockchain’s
                         security</h6>
@@ -59,29 +60,27 @@ const HomePage = () => {
                     <img src={controlVImage} alt="Control V"/>
                 </div>
             </div>
-
             {/* Reversed Content */}
             <div className="reversed-content">
-                {/* Image Container */}
-                <div className="image-container">
-                    <img src={templeImage} alt="Temple"/>
-                </div>
-                {/* Text Container */}
-                <div className="text-container">
-                    <h2>Why choose us?</h2>
-                    <p>BetChain is not just a platform; it’s a new era in online betting.
-                        Combining artificial intelligence with blockchain’s security,
-                        we offer a betting experience that’s both thrilling and trustworthy.
-                    </p>
-                </div>
-            </div>
+    <div className="image-container">
+        <img src={templeImage} alt="Temple"/>
+    </div>
+    <div className="text-container">
+        <h2>Why choose us?</h2>
+        <p>Crypto<span className="highlight">Casino</span> is not just a platform; it’s a new era in online betting.
+            Combining artificial intelligence with blockchain’s security,
+            we offer a betting experience that’s both thrilling and trustworthy.
+        </p>
+    </div>
+</div>
+
             {/* New Section with Text on Top and Images Below */}
             <div className="top-text-images-below">
                 {/* Text Container */}
                 <div className="text-container">
                     <h2>Our Tracks</h2>
                     <p>
-                        BetChain is not just a platform; it’s a new era in online betting.
+                        CryptoCasino is not just a platform; it’s a new era in online betting.
                         Combining artificial intelligence with blockchain’s security
                     </p>
                 </div>
@@ -105,7 +104,7 @@ const HomePage = () => {
             <div className="timeline-section">
 
                 <div className="text-container">
-                    <h3>BetChain: The Pinnacle of Decentralized Betting</h3>
+                    <h3>CryptoCasino: The Pinnacle of Decentralized Betting</h3>
                     <p>Experience the Thrill of Innovation</p>
                 </div>
                 <div className="timeline">
@@ -144,13 +143,13 @@ const HomePage = () => {
                         <div className="timeline-content">
                             <h3>Step 5</h3>
                             <h4>Community-Centric NFTs</h4>
-                            <p>Mint your unique NFT avatars and become part of an ever-growing BetChain family.</p>
+                            <p>Mint your unique NFT avatars and become part of an ever-growing CryptoCasino family.</p>
                         </div>
                     </div>
                     <div className="timeline-item">
                         <div className="timeline-content">
                             <h3>Step 6</h3>
-                            <h4>Join the BetChain Community</h4>
+                            <h4>Join the CryptoCasino Community</h4>
                             <p>Become a part of the future of online betting today. Sign up, mint your NFT, and start
                                 playing!</p>
                         </div>

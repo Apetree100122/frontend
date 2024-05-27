@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AIArt.css';
-import model1Image from '../assets/lc.png';
-import model2Image from '../assets/lc.png';
+import model1Image from '../assets/stable-1.png'
+import model2Image from '../assets/stable-2.jpg';
 import image3 from '../assets/lc.png';
 import profileImage from '../assets/lc.png';
 import casinoIcon from '../assets/lc.png';  // Replace with actual paths to your icons

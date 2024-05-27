@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from "prop-types";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import logo from '../assets/Crypto-Casino-Logo.png'
 // Header.PropTypes = {
 //     image1: PropTypes.string,
 //     image2: PropTypes.string,
@@ -25,7 +26,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo-button">
-                <button onClick={handleHomeAction}>Logo</button>
+               <img src={logo}/>
             </div>
             <div className="header-buttons">
                 <button className="notification-button">

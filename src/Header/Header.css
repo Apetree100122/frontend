@@ -15,6 +15,13 @@
 
 .logo-button button {
     font-size: 1.2em;
+
+}
+
+
+.logo-button img{
+    height: 60px;
+    width: 100px;
 }
 
 .header-buttons {
