@@ -1,53 +1,52 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './RoulettePage.css';
-import profileImage from '../assets/lc.png';
-import casinoIcon from '../assets/lc.png';
-import defiIcon from '../assets/invoice-1.png';
-import aiArtIcon from '../assets/photo-gallery.png';
-import helpIcon from '../assets/school.png';
-import settingsIcon from '../assets/settings.png';
-import console from '../assets/joystick.png';
-import wallet from '../assets/wallet.png';
-import casino from '../assets/casino-lo.png'
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
+import rouletteImage from "../assets/roulette2.jpeg";
 
 const RoulettePage = () => {
-  return (
-    <div className="roulette-page">
-      <Header />
-      <Sidebar />
-      <main className="main-content2">
-        <div className="welcome-section">
-          <h1>Good Morning, Amann</h1>
-          <span className="balance-display">Bal: <span className="balance-amount">$1,500.00</span></span>
-        </div>
-        <div className="roulette-section">
-          <div className="roulette-wheel">
-            <img src={casino} alt="Roulette Wheel" />
-          </div>
-          <div className="roulette-table">
-            <div className="number-row">
-              {Array.from({ length: 36 }, (_, i) => (
-                <div className={`number-cell ${i % 2 === 0 ? 'red' : 'black'}`} key={i}>
-                  {i + 1}
+    const [angle, setAngle] = useState(0);
+    const wheelRef = useRef(null);
+
+    const spinWheel = () => {
+        const newAngle = Math.floor(Math.random() * 360) + 3600; // 3600 ensures multiple spins
+        setAngle(newAngle);
+
+        // Set the final angle as a CSS variable for keyframe animation
+        if (wheelRef.current) {
+            wheelRef.current.style.setProperty('--final-angle', `${newAngle}deg`);
+            wheelRef.current.style.animation = 'none'; // Reset animation
+            // Trigger reflow to restart the animation
+            wheelRef.current.offsetHeight; // No need to store this value
+            wheelRef.current.style.animation = 'spin 3s ease-out';
+        }
+    };
+
+    const segments = Array.from({ length: 37 }, (_, i) => i); // Generate 0-36 segments for betting table
+
+    return (
+        <div className="roulette-page">
+            <Header />
+            <Sidebar />
+            <main className="main-content2">
+                <div className="roulette-container">
+                    <div className="wheel" ref={wheelRef} style={{ backgroundImage: `url(${rouletteImage})` }}></div>
+                    <button onClick={spinWheel}>Spin</button>
                 </div>
-              ))}
-            </div>
-            <div className="betting-options">
-              <div className="bet-option">1 to 12</div>
-              <div className="bet-option">25 - 30</div>
-              <div className="bet-option">25 - 30</div>
-              <div className="bet-option">1 - 18</div>
-              <div className="bet-option">Odd</div>
-              <div className="bet-option">Even</div>
-              <div className="bet-option">19 to 36</div>
-            </div>
-          </div>
+                <div className="table-container">
+                    <div className="table-header">Place Your Bets</div>
+                    <div className="betting-table">
+                        {segments.map((segment) => (
+                            <div key={segment} className={`betting-cell ${segment % 2 === 0 ? 'even' : 'odd'}`}>
+                                <span>{segment}</span>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="table-footer">Good Luck!</div>
+                </div>
+            </main>
         </div>
-      </main>
-    </div>
-  );
+    );
 };
 
 export default RoulettePage;
