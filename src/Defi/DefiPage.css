@@ -135,3 +135,11 @@ html {
     color: #888;
   }
   
+  .bal-text {
+    font-size: 0.8em; /* Reduce the font size of "Bal" */
+  }
+  
+  .balance-amount {
+    font-size: 1.2em; /* Keep the balance amount larger */
+    color: #663300;
+  }

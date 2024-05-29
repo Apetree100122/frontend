@@ -24,6 +24,7 @@
   }
   .input-container input[type="text"] {
     text-align: left; /* Align text to the left */
+    color: white; /* Change the text color to white */
   }
   
   .input-container input[type="text"]::placeholder {
@@ -158,8 +159,8 @@
     align-items: center;
     justify-content: center;
     z-index: 2000; /* Make sure it's above other content */
+    backdrop-filter: blur(5px); /* Add a blur effect to the background */
   }
-  
   .modal-content {
     background-color:#221C35;
     padding: 20px;
@@ -171,6 +172,7 @@
   .modal-content h2 {
     margin: 0;
     font-size: 1.5em;
+    color: white; /* Change the text color to white */
   }
   
   

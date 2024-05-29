@@ -35,7 +35,7 @@ const DiscoverPage = () => {
         <main className="main-content4">
           <div className="header-content">
             <h1>Good Morning, Yo!</h1>
-            <button className="balance-button">Balance: 7.9 ETH</button>
+            <button className="balance-button">Bal: 7.9 ETH</button>
           </div>
 
           <div className="image-gallery">

@@ -28,13 +28,37 @@
 }
 
 .balance-button {
-  background-color: #007bff;
-  color: #ffffff;
+  background-color: gold;
+  color: #663300;
   border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
+  padding: 12px 24px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 0 6px 0 rgb(255, 228, 74);
+  transition: all 0.3s ease;
+  position: relative;
+  outline: none; /* Remove outline on hover */
+}
+
+.balance-button::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background-color: transparent;
+  border-radius: 36px;
+  z-index: -1;
+}
+
+.balance-button:hover {
+  background-color: gold;
+  box-shadow: 0 3px 0 gold;
+  transform: translateY(3px);
 }
 
 .image-gallery {

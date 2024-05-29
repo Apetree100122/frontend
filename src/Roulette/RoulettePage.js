@@ -17,9 +17,9 @@ const RoulettePage = () => {
             wheelRef.current.style.setProperty('--final-angle', `${newAngle}deg`);
             wheelRef.current.style.animation = 'none'; // Reset animation
             // Trigger reflow to restart the animation
-            wheelRef.current.offsetHeight; // No need to store this value
+            void wheelRef.current.offsetHeight;
             wheelRef.current.style.animation = 'spin 3s ease-out';
-        }
+          }
     };
 
     const segments = Array.from({ length: 37 }, (_, i) => i); // Generate 0-36 segments for betting table

@@ -14,14 +14,13 @@ import Sidebar from "../Sidebar/Sidebar";
 const DefiPage = () => {
   return (
     <div className="defi-page">
-      <Header/>
-      <Sidebar/>
+      <Header />
+      <Sidebar />
       <main className="main-content5">
         <div className="welcome-section">
           <h1>Welcome To DeFi</h1>
           <div className="balance-display">
-            <span>Bal :</span>
-            <span className="balance-amount">$1,500.00</span>
+            <BalanceButton />
           </div>
         </div>
         <p>Deposit crypto to register and play in our high class slots and casinos</p>
@@ -83,6 +82,15 @@ const DefiPage = () => {
         </div>
       </main>
     </div>
+  );
+};
+
+const BalanceButton = () => {
+  return (
+    <button className="balance-button">
+      <span className="bal-text">Bal: </span>
+      <span className="balance-amount">$1,500.00</span>
+    </button>
   );
 };
 
