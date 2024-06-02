@@ -8,7 +8,7 @@ import Sidebar from "../Sidebar/Sidebar";
 import OpenAI from 'openai/index.mjs';
 
 const AIArt = () => {
-  const openai = new OpenAI({ apiKey: "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", dangerouslyAllowBrowser: true });
+  const openai = new OpenAI({ apiKey: "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", dangerouslyAllowBrowser: true });
   const [isLoading, setIsLoading] = useState(false);
   const [generatedImage, setGeneratedImage] = useState(null);
   const [prompt, setPrompt] = useState('');
