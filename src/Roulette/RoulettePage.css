@@ -16,12 +16,13 @@ html {
 
 .roulette-container {
     position: relative;
-    width: 300px; /* Adjust size as needed */
-    height: 380px; /* Adjust size as needed */
+    width: 215px; /* Adjust size as needed */
+    height: 290px; /* Adjust size as needed */
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 16px;
 }
 
 .wheel {
@@ -30,11 +31,12 @@ html {
     height: 100%;
     background-size: cover;
     background-position: center;
-    border-radius: 70%;
+    border-radius: 85%;
     animation: spin 0s ease-out; /* Initialize with no animation */
 }
 
 button {
+
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;

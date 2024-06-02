@@ -4,8 +4,6 @@ import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
 import rouletteImage from "../assets/roulette7.jpeg";
 
-
-
 const RoulettePage = () => {
     const [angle, setAngle] = useState(0);
     const [betAmt, setBetAmt] = useState(0);
@@ -24,10 +22,12 @@ const RoulettePage = () => {
             // Trigger reflow to restart the animation
             void wheelRef.current.offsetHeight;
             wheelRef.current.style.animation = 'spin 3s ease-out';
-          }
+        }
     };
 
-    const segments = Array.from({ length: 37 }, (_, i) => i); // Generate 0-36 segments for betting table
+    const segments = [0, 32, 15, 19, 4, 21, 2, 25, 17, 34, 6, 27, 13, 36, 11, 30, 8, 23, 10, 5, 24, 16, 33,
+        1, 20, 14, 31, 9, 22, 18, 29, 7, 28, 12, 35, 3, 26
+    ];
 
     return (
         <div className="roulette-page">
@@ -47,7 +47,6 @@ const RoulettePage = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="table-footer">Good Luck!</div>
                 </div>
             </main>
         </div>
