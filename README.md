@@ -18,7 +18,7 @@ The core gaming logic, specifically for the roulette game, was developed and dep
 
 We implemented a lending service that allows users to deposit tokens from any supported chain as collateral to borrow LINK. Chainlink Data Feeds were used to fetch real-time asset prices, ensuring accurate and transparent collateral management. Cross-chain compatibility was achieved through Chainlink CCIP, facilitating seamless asset transfers and communication across different blockchain networks. The lending contracts were deployed on Avalanche Fuji C-Chain, taking advantage of its secure and scalable infrastructure.
 
-## For Smart Contracts Code Check: https://github.com/CryptoCasinoPlus/smartcontracts
+### For Smart Contracts Code Check: https://github.com/CryptoCasinoPlus/smartcontracts
 
 ### Fuji Testnet CCIP
 - **Avalanche Lending**: [Contract](https://testnet.snowtrace.io/address/0xf25B0cBCA90Ac97e3037488Bb64F0E0D9D706597)
