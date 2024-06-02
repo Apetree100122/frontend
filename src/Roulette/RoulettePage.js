@@ -2,11 +2,16 @@ import React, { useState, useRef } from 'react';
 import './RoulettePage.css';
 import Sidebar from "../Sidebar/Sidebar";
 import Header from "../Header/Header";
-import rouletteImage from "../assets/roulette2.jpeg";
+import rouletteImage from "../assets/roulette7.jpeg";
+
+
 
 const RoulettePage = () => {
     const [angle, setAngle] = useState(0);
+    const [betAmt, setBetAmt] = useState(0);
     const wheelRef = useRef(null);
+
+    // create a function that grabs the contract method placebet
 
     const spinWheel = () => {
         const newAngle = Math.floor(Math.random() * 360) + 3600; // 3600 ensures multiple spins
