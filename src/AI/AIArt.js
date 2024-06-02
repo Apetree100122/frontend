@@ -8,7 +8,9 @@ import Sidebar from "../Sidebar/Sidebar";
 import OpenAI from 'openai/index.mjs';
 
 const AIArt = () => {
-  const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, dangerouslyAllowBrowser: true });
+  // Read the API key from the environment variable
+  const openai = new OpenAI({ apiKey: process.env.REACT_APP_OPENAI_API_KEY, dangerouslyAllowBrowser: true });
+
   const [isLoading, setIsLoading] = useState(false);
   const [generatedImage, setGeneratedImage] = useState(null);
   const [prompt, setPrompt] = useState('');
