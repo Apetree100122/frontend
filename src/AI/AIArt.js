@@ -9,20 +9,24 @@ import defiIcon from '../assets/invoice-1.png';
 import aiArtIcon from '../assets/photo-gallery.png';
 import helpIcon from '../assets/school.png';
 import settingsIcon from '../assets/settings.png';
-import console from '../assets/joystick.png';
+import joystickIcon from '../assets/joystick.png';
 import wallet from '../assets/wallet.png';
 import uploadIcon from '../assets/photo-gallery.png';
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import OpenAI from 'openai/index.mjs';
+import { create  } from 'ipfs-http-client';
+
+const ipfs = create({ host: 'localhost', port: 5001, protocol: 'http' })
 
 const AIArt = () => {
-  const openai = new OpenAI({ apiKey: "sk-proj-pnHw0imRj013HLP0076YT3BlbkFJnc8lcefQL9LFv0iUEIn0", dangerouslyAllowBrowser: true });
+  const openai = new OpenAI({ apiKey: "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", dangerouslyAllowBrowser: true });
   const [isLoading, setIsLoading] = useState(false);
   const [generatedImage, setGeneratedImage] = useState(null);
   const [prompt, setPrompt] = useState('');
   const [selectedModel, setSelectedModel] = useState(null);
   const [url, setUrl] = useState("");
+  const [uploadedImageUrl, setUploadedImageUrl] = useState('');
 
   const handleModelClick = (model) => {
     if (selectedModel === model) {
@@ -31,6 +35,8 @@ const AIArt = () => {
       setSelectedModel(model); // Select the model if not selected
     }
   };
+
+  
 
   const handleGenerate = async () => {
     setIsLoading(true);
@@ -46,10 +52,26 @@ const AIArt = () => {
     setIsLoading(false);
   };
 
-  const handleMint = () => {
-    // Handle minting action
-  };
+  const handleMint = async () => {
+    if (!generatedImage){
+      return;
+    }
 
+    try {
+      setIsLoading(true);
+      const response = await fetch(generatedImage);
+      const imageBlob = await response.blob();
+      const file = new File([imageBlob], 'generated-image.png', { type: 'image/png' });
+      console.log(file);
+      const added = await ipfs.add(file);
+
+      const url = `https://ipfs.io/ipfs/${added.path}`;
+      setUploadedImageUrl(url);
+    } catch (error) {
+    } finally {
+      setIsLoading(false);
+    }
+  };
   const handleCancel = () => {
     setGeneratedImage(null);
   };
@@ -104,16 +126,27 @@ const AIArt = () => {
         </div>
       )}
 
-      {generatedImage && (
+{generatedImage && (
         <div className="modal">
           <div className="modal-content">
             <img src={generatedImage} alt="Generated" className="generated-image" />
             <p className="prompt-text">{prompt}</p>
             <div className="modal-buttons">
-              <button className="mint-button" onClick={handleMint}>Mint</button>
+              <button className="mint-button" onClick={handleMint} disabled={isLoading}>
+                {isLoading ? 'Minting...' : 'Mint'}
+              </button>
               <button className="cancel-button" onClick={handleCancel}>Cancel</button>
             </div>
           </div>
+        </div>
+      )}
+
+{uploadedImageUrl && (
+        <div>
+          <p>Image uploaded to IPFS:</p>
+          <a href={uploadedImageUrl} target="_blank" rel="noopener noreferrer">
+            {uploadedImageUrl}
+          </a>
         </div>
       )}
     </div>
