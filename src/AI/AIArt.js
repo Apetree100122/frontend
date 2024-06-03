@@ -20,7 +20,9 @@ import { create  } from 'ipfs-http-client';
 const ipfs = create({ host: 'localhost', port: 5001, protocol: 'http' })
 
 const AIArt = () => {
-  const openai = new OpenAI({ apiKey: "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", dangerouslyAllowBrowser: true });
+  // Read the API key from the environment variable
+  const openai = new OpenAI({ apiKey: process.env.REACT_APP_OPENAI_API_KEY, dangerouslyAllowBrowser: true });
+
   const [isLoading, setIsLoading] = useState(false);
   const [generatedImage, setGeneratedImage] = useState(null);
   const [prompt, setPrompt] = useState('');
@@ -40,16 +42,21 @@ const AIArt = () => {
 
   const handleGenerate = async () => {
     setIsLoading(true);
-    const response = await openai.images.generate({
-      model: "dall-e-2",
-      prompt: prompt,
-      n: 1,
-      size: "1024x1024",
-    });
-    const image_url = response.data[0].url;
-    setUrl(image_url);
-    setGeneratedImage(image_url);
-    setIsLoading(false);
+    try {
+      const response = await openai.images.generate({
+        model: "dall-e-2",
+        prompt: prompt,
+        n: 1,
+        size: "1024x1024",
+      });
+      const image_url = response.data[0].url;
+      setUrl(image_url);
+      setGeneratedImage(image_url);
+    } catch (error) {
+      console.error("Error generating image:", error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleMint = async () => {
@@ -77,54 +84,54 @@ const AIArt = () => {
   };
 
   return (
-    <div className="ai-page">
-      <Header />
-      <Sidebar />
-      <main className="main-content3">
-        <h1>Generate Profile Pics with AI</h1>
-        <div className='main-content21'>
-          <div className="input-container">
-            <input 
-              type="text" 
-              placeholder="Prompt" 
-              value={prompt} 
-              onChange={(e) => setPrompt(e.target.value)} 
-            />
-            <button onClick={handleGenerate}>Generate</button>
-          </div>
-          <div className='temp-div'>
-            <div className="upload-container">
-              <div className="file-upload-wrapper-out">
-                <img src={uploadIcon} alt="Upload Icon" className="upload-icon" />
-                <label htmlFor="fileUpload">Upload Cover Art</label>
-                <input type="file" id="fileUpload" />
+      <div className="ai-page">
+        <Header />
+        <Sidebar />
+        <main className="main-content3">
+          <h1>Generate Profile Pics with AI</h1>
+          <div className='main-content21'>
+            <div className="input-container">
+              <input
+                  type="text"
+                  placeholder="Prompt"
+                  value={prompt}
+                  onChange={(e) => setPrompt(e.target.value)}
+              />
+              <button onClick={handleGenerate}>Generate</button>
+            </div>
+            <div className='temp-div'>
+              <div className="upload-container">
+                <div className="file-upload-wrapper-out">
+                  <img src={uploadIcon} alt="Upload Icon" className="upload-icon" />
+                  <label htmlFor="fileUpload">Upload Cover Art</label>
+                  <input type="file" id="fileUpload" />
+                </div>
+              </div>
+              <div className='upload-button'>
+                <button>Upload</button>
               </div>
             </div>
-            <div className='upload-button'>
-              <button>Upload</button>
+          </div>
+          <h2>Pick Model</h2>
+          <div className="model-container">
+            <div className="model-option" onClick={() => handleModelClick('model1')}>
+              <img src={model1Image} alt="Model 1" className={selectedModel === 'model1' ? 'selected' : ''} />
+              <span>Model 1</span>
+            </div>
+            <div className="model-option" onClick={() => handleModelClick('model2')}>
+              <img src={model2Image} alt="Model 2" className={selectedModel === 'model2' ? 'selected' : ''} />
+              <span>Model 2</span>
             </div>
           </div>
-        </div>
-        <h2>Pick Model</h2>
-        <div className="model-container">
-          <div className="model-option" onClick={() => handleModelClick('model1')}>
-            <img src={model1Image} alt="Model 1" className={selectedModel === 'model1' ? 'selected' : ''} />
-            <span>Model 1</span>
-          </div>
-          <div className="model-option" onClick={() => handleModelClick('model2')}>
-            <img src={model2Image} alt="Model 2" className={selectedModel === 'model2' ? 'selected' : ''} />
-            <span>Model 2</span>
-          </div>
-        </div>
-      </main>
+        </main>
 
-      {isLoading && (
-        <div className="modal">
-          <div className="modal-content">
-            <h2>Generating...</h2>
-          </div>
-        </div>
-      )}
+        {isLoading && (
+            <div className="modal">
+              <div className="modal-content">
+                <h2>Generating...</h2>
+              </div>
+            </div>
+        )}
 
 {generatedImage && (
         <div className="modal">

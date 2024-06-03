@@ -26,7 +26,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="logo-button">
-               <img src={logo}/>
+               <img onClick={handleHomeAction} src={logo}/>
             </div>
             <div className="header-buttons">
                 <button className="notification-button">

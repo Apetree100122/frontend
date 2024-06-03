@@ -1,4 +1,3 @@
-// App.js
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import HomePage from './HomePage';
@@ -27,7 +26,6 @@ import {
 
 const queryClient = new QueryClient();
 
-
 const config = getDefaultConfig({
   appName: 'My RainbowKit App',
   projectId: 'f97a5780e7fa00669a153e4d843ece61',
@@ -35,25 +33,23 @@ const config = getDefaultConfig({
   ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
-
-function App() { 
+function App() {
   return (
-    <WagmiProvider config={config}>
-    <QueryClientProvider client={queryClient}>
-      <RainbowKitProvider>
-
-    <Router>
-      <Routes>
-        <Route path="/discover" element={<DiscoverPage/>} />
-        <Route path="/" element={<HomePage/>} />
-        <Route path='/ai' element={<AIArt/>} />
-        <Route path='/defi' element={<DefiPage/>} />
-        <Route path='/game' element={<RoulettePage/>} />
-        </Routes>
-    </Router>
-    </RainbowKitProvider>
-    </QueryClientProvider>
-  </WagmiProvider>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitProvider>
+            <Router>
+              <Routes>
+                <Route path="/discover" element={<DiscoverPage />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/ai" element={<AIArt />} />
+                <Route path="/defi" element={<DefiPage />} />
+                <Route path="/game" element={<RoulettePage />} />
+              </Routes>
+            </Router>
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
   );
 }
 
