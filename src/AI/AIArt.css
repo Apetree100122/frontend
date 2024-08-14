@@ -1,52 +1,14 @@
-/* DiscoverPage.css */
-.ai-page {
+/* DiscoverPage.css */.ai-page {display: flex;flex-direction: column;height: 100vh; background-color: #221C35; color: white}.main-content3 { margin-left: 220px; /* Adjust this based on your																															sidebar width */ padding-top:
+		
+	100px; /* Adjust this 																																based on your header height */ }.main-content21 {
     display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #221C35;
-    color: white;
-  }
-  
-  .main-content3 {
-    margin-left: 220px; /* Adjust this based on your sidebar width */
-    padding-top: 100px; /* Adjust this based on your header height */
-  }
-  
-  .main-content21 {
-    display: flex;
-    gap: 10px;
-  }
-  
-.input-container  , .upload-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .input-container input[type="text"] {
-    text-align: left; /* Align text to the left */
-    color: white; /* Change the text color to white */
-  }
-  
-  .input-container input[type="text"]::placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 10px; /* Adjust padding as needed */
-    color: #888; /* Placeholder text color */
-  }
-
-  .input-container input{
-    border-radius: 10px;
-    background-color:  #302A4C;
-    height: 100px;
-    width: 300px;
-    margin-right: 100px;
-  }
-  .input-container button{
-    height: 30px;
-    width: 300px;
-    margin-right: 100px;
-    background-color: gold;
+    gap: 10px; }.input-container,.upload-container { display: flex;flex-direction: column;gap: 10px;}.input-container input[type="text"] {text-align: left; /* Align																	 text to the left */color: white; /* Change																 the text color to white */} .input-container input[type="text"]::placeholder{position: absolute; top: 0; left: 0;padding: 10px; /* Adjust padding as  
+																needed */color: #888; /* 
+																Placeholder text color */}.input-
+container input{
+	border-radius: 10px; background-color:  #302A4C; height: 
+		100px;width:300px;margin-right: 100px;}.input-containerbutton{height: 
+		30px; width: 300px;  margin-right: 100px; background-color: gold;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -108,142 +70,77 @@
     margin-bottom: 10px;
   }
   
-  .file-upload-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center items horizontally */
-    margin-bottom: 5px; /* Add some spacing between the small image and the text */
-  }
-  
-  .upload-icon {
-    width: 20px; /* Adjust size of the small image */
-  }
-  
-  .upload-container label {
-    font-size: 16px; /* Adjust font size of the "Choose File" text */
-    text-align: center; /* Center the text horizontally */
-  }
-  
-  .upload-container label:hover {
-    background-color: #0056b3; /* Darker background on hover */
-  }
-  
-  .upload-container input[type="file"] {
-    display: none; /* Hide the original file input */
-  }
-  
-  .model-container {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .model-option {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .model-option img {
-    width: 100px;
-    height: 100px;
-    margin-right: 10px;
-  }
-  .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000; /* Make sure it's above other content */
-    backdrop-filter: blur(5px); /* Add a blur effect to the background */
-  }
-  .modal-content {
-    background-color:#221C35;
-    padding: 20px;
-    color: white;
+  .file-upload-wrapper {display: flex; flex-direction: column;
+align-items: center; /* Center items horizontally */
+    margin-bottom: 5px; /* Add some spacing between the small image and 
+						the text */} .upload-icon {  width: 20px; /* 
+												   Adjust size of 
+												   small image*/}.upload 
+container label {font-size: 16px; /* Adjust font size 
+	  of the "Choose File" text */ text-align: center; /* Center 
+	  the
+	  text horizontally */ }
+  .upload-container label:hover { background-color: #0056b3; /* Darker 
+								 background on hover */ }
+.upload-container input[type="file"] { display: none; /* original
+										file input */ }.model-container 
+{display: flex;gap: 20px;} .model-option { display: flex; 
+										  flex-direction: column;
+				   align-items: center;}.model-option
+img {width: 100px;height: 100px;margin-right: 10px;}.modal
+{position: fixed;top:0; left: 0 ; height:100%;background-color:
+		rgba(0, 0, 0, 0.5); display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  z-index: 2000; /* Make sure
+	  its above other content */ backdrop-filter: 
+		  blur(5px); /* Add a blur effect
+	  to the background */ }.modal-content{ background-color:#221C35;
+	  padding: 20px;
+	  color: white;
     border-radius: 5px;
-    text-align: center;
-  }
-  
-  .modal-content h2 {
-    margin: 0;
-    font-size: 1.5em;
-    color: white; /* Change the text color to white */
-  }
-  
-  
-  .generated-image {
-    width: 400px; /* Adjust size as needed */
-    height: 400px;
-    margin-bottom: 20px;
-  }
-  
-  .modal-content p {
-    font-size: 1em;
-    margin: 20px 0;
-  }
-  .prompt-text {
-    color: white; /* Set the prompt text color to black */
-    font-weight: bold; /* Make text bold */
-    font-family: Arial, sans-serif; /* Change font family if needed */
-}
-  
-  .modal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .mint-button {
-    background-color: yellow; /* Yellow background for mint button */
-    color: #221C35; /* Text color */
-}
-
-.mint-button:hover {
-    background-color: #FFD700; /* Lighter yellow on hover */
-}
-
-.cancel-button {
-    background-color: white; /* White background for cancel button */
-    color: #221C35; /* Text color */
-}
-
-.cancel-button:hover {
-    background-color: #f0f0f0; /* Lighter grey on hover */
-}
-  
-.modal-buttons button {
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease; /* Smooth transition */
-}
-  .model-option {
-    display: flex;
+    text-align: center; }
+  .modal-content h2 {margin: 0; 
+					 font-size: 1.5em;color: 
+		white; /* Change the text
+	  color to white */}.generated-image
+{width: 400px; /* Adjust size
+	  as needed */ height: 400px;
+    margin-bottom: 20px;}.modal-content 
+{font-size: 1em; 				  
+ margin: 20px 0;}.prompt-text {color: white; /* Set the prompt text
+							   color to black */ font-weight: 
+	  bold; /* Make text bold */font-family:
+	  Arial, sans-serif; /* Change font 
+	  family if needed */}
+  .modal-buttons { display: flex;
+    justify-content: center; gap:
+		10px;}.mint-button { background-color:
+	  yellow; /* Yellow background
+ for mint button */color: #221C35; /* Text				
+ color */}.mint-button:hover
+{ background-color:#FFD700; /* Lighter 
+ yellow on hover */}.cancel-button 
+    {background-color: white; 
+	/* White background for cancel button */
+    color: #221C35; /* Text
+	color */.cancel-button:hover 
+{ background-color: #f0f0f0; 
+	 /* Lighter grey on hover */}.modal-buttons 
+	 button {padding: 10px 20px; font-size: 1em; border: none;border-
+		 radius: 5px; cursor: pointer; transition: background-color
+		 0.3s ease; /* Smooth transition */}.model-option{display: flex;
     flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Add smooth transition */
-  }
-  
-  .model-option img {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 10px;
-  }
-  
-  .model-option.selected {
-    background-color: #FFD700; /* Yellow background for selected model */
-  }
-  
-  .model-option:not(.selected):hover {
-    background-color: #333; /* Dark background on hover for deselected model */
+    align-items: center; cursor:pointer; transition: 
+        background-color 0.3s ease; 
+      /* Add smooth transition */ }
+  .model-option img 
+{ width: 100px; height: 100px;margin-bottom: 10px; }
+.model-option.selected {
+    background-color: #FFD700; 
+      /* Yellow background for selected model */ }
+  .model-option:not(.selected):hover{
+ background-color: #333; /* Dark background on hover for deselected model */
   }
   
   
